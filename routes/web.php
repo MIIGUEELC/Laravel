@@ -1,7 +1,9 @@
 <?php
-
+use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/test-activity', [ActivityController::class, 'index']);
 
 Route::get('/', function () {
     return view('welcome');

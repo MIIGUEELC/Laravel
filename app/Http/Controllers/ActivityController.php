@@ -11,7 +11,7 @@ class ActivityController extends Controller
      */
     public function index()
     {
-        //
+        return "¡Hola Mundo desde ActivityController!";
     }
 
     /**
