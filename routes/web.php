@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
-//Route::get('/test-activity', [ActivityController::class, 'index']); para prbra en controller
+Route::get('/test-activity', [ActivityController::class, 'index']);  // prueba
 Route::resource('activities', ActivityController::class);// crea las rutas CRUD.
 
 Route::get('/', function () {

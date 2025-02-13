@@ -12,8 +12,9 @@ class ActivityController extends Controller
     public function index()
     {
         $activities = Activity::all();
-        return view('activities.index', compact('activities')); //esto con la vista
-       // return Activity::all();
+       return view('activities.index', compact('activities')); //esto con la vista
+        //return Activity::all();
+      // return "¡Hola desde ActivityController!";
     }
 
     /**
