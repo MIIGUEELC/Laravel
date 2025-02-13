@@ -1,4 +1,4 @@
-<!-- resources/views/activities/index.blade.php -->
+<!-- resources/views/index.blade.php -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +9,13 @@
 </head>
 <body>
     <h1>Lista de Actividades</h1>
+
+    
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
 
     @if($activities->isEmpty())
         <p>No hay actividades disponibles.</p>
