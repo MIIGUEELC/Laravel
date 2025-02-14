@@ -30,26 +30,27 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        // Validación de los datos
-        $request->validate([
-            'type' => 'required|string|in:surf,windsurf,kayak,atv,hot air balloon',
-            'datetime' => 'required|date',
-            'user_id' => 'required|exists:users,id', // Verificar si el user_id existe
-            'notes' => 'nullable|string',
-            'satisfaction' => 'nullable|integer|min:1|max:5',
-        ]);
+        //dd($request);// esto es para la validacion de datos
+        // $request->validate([
+        //     'type' => 'required|string|in:surf,windsurf,kayak,atv,hot air balloon',
+        //     'datetime' => 'required|date',
+        //     'user_id' => 'required|exists:users,id', // aqui que sea requerido?
+        //     'notes' => 'nullable|string',
+        //     'satisfaction' => 'nullable|integer|min:1|max:5',
+        // ]);
 
         // Crear la actividad
-        Activity::create([
+
+        $activities=Activity::create([
             'type' => $request->type,
-            'user_id' => $request->user_id, // Usar el user_id recibido del formulario
+            'user_id' => $request->user_id, // Uso el del formulario?
             'datetime' => $request->datetime,
-            'paid' => $request->has('paid'), // Convertir el checkbox a true/false
+            'paid' => $request->has('paid'), 
             'notes' => $request->notes,
             'satisfaction' => $request->satisfaction,
         ]);
-
-        // Redirigir al listado de actividades con mensaje de éxito
+       dd($activities); //debug
+        // Redirigir al listado de actividades 
         return redirect()->route('activities.index')->with('success', 'Actividad creada correctamente');
     }
 
