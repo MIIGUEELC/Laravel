@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Room extends Model
 {
-    /** @use HasFactory<\Database\Factories\RoomFactory> */
     use HasFactory;
+
+    protected $fillable = ['name', 'type', 'price', 'capacity'];
+
+    // Relación: Una habitación tiene muchas reservas
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
 }
