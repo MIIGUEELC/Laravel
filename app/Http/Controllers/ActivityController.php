@@ -49,7 +49,7 @@ class ActivityController extends Controller
             'notes' => $request->notes,
             'satisfaction' => $request->satisfaction,
         ]);
-       dd($activities); //debug
+       //dd($activities); //debug
         // Redirigir al listado de actividades 
         return redirect()->route('activities.index')->with('success', 'Actividad creada correctamente');
     }
