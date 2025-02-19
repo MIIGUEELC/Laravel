@@ -2,16 +2,13 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Bookings;
 use Illuminate\Database\Seeder;
 
 class BookingsSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        //
+        Bookings::factory(10)->create(); // Crea 10 reservas ficticias
     }
 }

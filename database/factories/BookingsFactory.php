@@ -9,15 +9,14 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class BookingsFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
     public function definition(): array
     {
         return [
-            //
+            'user_id' => 1, // usar User::factory() para crear un usuario.
+            'room_id' => 1, 
+            'check_in_date' => $this->faker->date(),
+            'check_out_date' => $this->faker->date(),
+            'status' => $this->faker->randomElement(['pending', 'confirmed', 'cancelled'])
         ];
     }
 }
