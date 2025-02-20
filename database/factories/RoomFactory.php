@@ -9,15 +9,15 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class RoomFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
     public function definition(): array
     {
         return [
-            //
+            'name' => 'Room ' . $this->faker->unique()->numberBetween(100, 999),
+            'type' => $this->faker->randomElement(['Single', 'Double', 'Suite', 'Deluxe']),
+            'price' => $this->faker->randomFloat(2, 50, 500), // Precios entre 50 y 500
+            'capacity' => $this->faker->numberBetween(1, 6), // De 1 a 6 personas
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }
