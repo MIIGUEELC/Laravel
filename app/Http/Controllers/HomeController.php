@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Room; // Importa el modelo Room
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('miranda.home');   //hacer la vista de home
+        $rooms = Room::all(); // Ahora podrás obtener las habitaciones
+        return view('miranda.home', compact('rooms'));
     }
 }
