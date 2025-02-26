@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use App\Mail\ContactMail;
 
 class ContactController extends Controller
 {
@@ -24,6 +25,7 @@ class ContactController extends Controller
         $comment = Contact::create(array_merge($validated, [
             'read' => false,
         ]));
+        Mail::to($data['email'])->send(new ContactMail($data));
 
         return redirect('/contact')->with('status', 'Thank you for your message!');
     }
