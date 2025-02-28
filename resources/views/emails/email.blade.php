@@ -6,13 +6,13 @@
     <title>Thank You for Contacting Us</title>
 </head>
 <body>
-    <h2>Hi {{ $data['client_name'] }},</h2>  {{-- Aquí usamos 'client_name' porque es el nombre correcto --}}
+    <h2>Hi {{ $client_name }},</h2>
     <p>Thank you for reaching out to us. We have received your message and will get back to you soon.</p>
 
     <h3>Your Message:</h3>
-    <p><strong>Subject:</strong> {{ $data['subject'] ?? 'No subject provided' }}</p>
+    <p><strong>Subject:</strong> {{ $subject ?? 'No subject provided' }}</p>
     <p><strong>Message:</strong></p>
-    <p>{{ $data['comment'] }}</p>
+    <p>{{ $comment }}</p>
 
     <p>Best regards,</p>
     <p>Hotel Miranda</p>
