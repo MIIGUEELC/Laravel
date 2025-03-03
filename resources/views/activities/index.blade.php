@@ -6,7 +6,7 @@
 
     <!-- Botón para crear nueva actividad -->
     <div class="mb-3">
-        <a href="{{ route('activities.create') }}" class="btn btn-primary">Create New Activity</a>
+        <a href="{{ route('activities.create') }}" class="btn btn-primary">Crear nueva actividad</a>
     </div>
 
     <!-- Mostrar mensaje de éxito si existe -->
