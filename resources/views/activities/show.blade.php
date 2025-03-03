@@ -11,7 +11,7 @@
             <p class="card-text"><strong>Date:</strong> {{ \Carbon\Carbon::parse($activity->dateTime)->format('d/m/Y H:i') }}</p>
             <p class="card-text"><strong>Notes:</strong> {{ $activity->notes }}</p>
             <p class="card-text"><strong>Paid:</strong> {{ $activity->paid ? 'Yes' : 'No' }}</p>
-            <p class="card-text"><strong>satusfacion:</strong> {{ $activity->satisfaction ?? 'N/A' }}</p>
+            <p class="card-text"><strong>Satisfaction:</strong> {{ $activity->satisfaction ?? 'N/A' }}</p>
         </div>
     </div>
 
