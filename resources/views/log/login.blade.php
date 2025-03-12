@@ -38,7 +38,7 @@
         </form>
 
         <p class="mt-4 text-center">
-            ¿You do not have an account yet? <a href="{{ route('register') }}" class="text-blue-500">Register here</a>
+            ¿You do not have an account yet? <a href="{{ route('register') }}" class="text-blue-500">Register</a>
         </p>
     </div>
 @endsection
