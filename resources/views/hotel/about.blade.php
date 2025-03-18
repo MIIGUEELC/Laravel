@@ -536,7 +536,7 @@
         <div class="footer__container2">
             <div>
                 <p class="footer__container2__copyright">
-                    Copyright by Miguel Covarrubias - 2025
+                    Copyright by Miguel ANGEL Covarrubias - 2025
                 </p>
             </div>
             <div class="footer__container2__links">
