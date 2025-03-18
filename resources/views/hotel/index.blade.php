@@ -664,7 +664,7 @@
                                 Phone Number
                             </p>
                             <p class="footer__container1__subcontainer3__contact__one__data__number">
-                                +34 690 86 56 69
+                                +34 690 86 56 69.
                             </p>
                         </div>
                     </div>
